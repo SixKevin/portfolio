@@ -1,23 +1,25 @@
+Absolument ! Voici le fichier style.css complet, intégrant le style "Glassmorphism" et le nouveau bouton de téléchargement (.cta-cv) avec son comportement sur mobile.
+
+Remplace tout le contenu de ton fichier style.css par ce code final :
+
+CSS
+
 /* --- VARIABLES & CONFIGURATION --- */
 :root {
-    /* Ici, on définit les couleurs et polices utilisées partout sur le site.
-       Si tu changes une couleur ici, ça change partout. */
-    --bg-body: #000000;           /* Fond noir */
-    --card-bg: #1c1c1e;           /* Gris foncé des cartes */
-    --text-main: #f5f5f7;         /* Texte principal (blanc cassé) */
-    --text-muted: #86868b;        /* Texte secondaire (gris) */
-    --accent: #2997ff;            /* La couleur bleu "Apple" */
+    --bg-body: #000000;       /* Noir profond */
+    --card-bg: #1c1c1e;       /* Gris Apple foncé */
+    --text-main: #f5f5f7;     /* Blanc cassé */
+    --text-muted: #86868b;    /* Texte secondaire (gris) */
+    --accent: #2997ff;        /* Bleu Apple */
     --glass-bg: rgba(28, 28, 30, 0.6); /* Fond transparent pour l'effet verre */
-    --glass-border: rgba(255, 255, 255, 0.1); /* Bordure subtile */
+    --glass-border: rgba(255, 255, 255, 0.1);
     --font-main: 'Inter', -apple-system, sans-serif;
     --font-code: 'Fira Code', monospace; /* Police pour le code */
 }
 
-
 /* Remise à zéro des marges par défaut du navigateur */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; } /* Défilement fluide quand on clique sur un lien */
-
 
 body {
     background-color: var(--bg-body);
@@ -27,20 +29,15 @@ body {
     line-height: 1.6;
 }
 
-
-/* --- BARRE DE DÉFILEMENT (SCROLLBAR) --- */
+/* Scrollbar Custom */
 ::-webkit-scrollbar { width: 10px; }
 ::-webkit-scrollbar-track { background: var(--bg-body); }
-::-webkit-scrollbar-thumb { 
-    background: #333; 
-    border-radius: 5px; 
-    border: 2px solid var(--bg-body); 
-}
+::-webkit-scrollbar-thumb { background: #333; border-radius: 5px; border: 2px solid var(--bg-body); }
 ::-webkit-scrollbar-thumb:hover { background: var(--accent); } /* Devient bleu au survol */
 
-/* --- UTILITAIRES (Classes pratiques) --- */
-.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; } /* Centre le contenu */
-a { text-decoration: none; color: inherit; transition: 0.3s; } /* Enlève le soulignement des liens */
+/* --- UTILITAIRES --- */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
 .highlight { color: var(--accent); }
 
 /* Texte avec dégradé de couleur */
@@ -59,7 +56,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; } /* Enlève le sou
     border-radius: 24px;
 }
 
-/* --- BARRE DE NAVIGATION (MENU) --- */
+/* --- NAVIGATION --- */
 .glass-nav {
     position: fixed; top: 0; width: 100%; height: 70px;
     padding: 0 5%; display: flex; justify-content: space-between; align-items: center;
@@ -70,8 +67,8 @@ a { text-decoration: none; color: inherit; transition: 0.3s; } /* Enlève le sou
 .logo { font-weight: 700; font-size: 1.3rem; letter-spacing: -0.5px; }
 
 /* Liste des liens du menu */
-.nav-links { 
-    display: flex; list-style: none; align-items: center; gap: 15px; 
+.nav-links {
+    display: flex; list-style: none; align-items: center; gap: 15px;
 }
 
 /* Apparence des liens individuels */
@@ -79,10 +76,10 @@ a { text-decoration: none; color: inherit; transition: 0.3s; } /* Enlève le sou
     color: var(--text-muted);
     font-size: 0.9rem;
     font-weight: 500;
-    padding: 8px 16px;       
-    border-radius: 20px;     
+    padding: 8px 16px;
+    border-radius: 20px;
     transition: all 0.3s ease;
-    border: 1px solid transparent; 
+    border: 1px solid transparent;
 }
 
 .nav-link:hover {
@@ -90,20 +87,16 @@ a { text-decoration: none; color: inherit; transition: 0.3s; } /* Enlève le sou
     background: rgba(255, 255, 255, 0.05);
 }
 
-/* Style du lien actif (la page où on se trouve) - Effet "Pilule brillante" */
+/* Style du lien actif (Scroll Spy) */
 .nav-link.active {
     color: #fff;
-    background: rgba(41, 151, 255, 0.15); 
-    border: 1px solid rgba(41, 151, 255, 0.3); 
-    box-shadow: 0 0 15px rgba(41, 151, 255, 0.2); 
+    background: rgba(41, 151, 255, 0.15);
+    border: 1px solid rgba(41, 151, 255, 0.3);
+    box-shadow: 0 0 15px rgba(41, 151, 255, 0.2);
     font-weight: 600;
 }
 
-/* Menu Burger pour Mobile (caché sur ordi) */
-.menu-toggle { display: none; cursor: pointer; }
-.bar { display: block; width: 25px; height: 2px; background: #fff; margin: 5px auto; transition: 0.3s; }
-
-/* Bouton d'action (ex: Contact) */
+/* Bouton Contact (CTA standard) */
 .cta-btn {
     background: var(--text-main); color: #000 !important;
     padding: 8px 20px; border-radius: 20px; font-weight: 600;
@@ -111,10 +104,32 @@ a { text-decoration: none; color: inherit; transition: 0.3s; } /* Enlève le sou
 }
 .cta-btn:hover { transform: scale(1.05); }
 
+/* BOUTON TÉLÉCHARGER CV (La modification demandée) */
+.cta-cv {
+    background: var(--accent);
+    color: white !important;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-left: 10px;
+    transition: 0.3s;
+    border: 1px solid var(--accent);
+}
+
+.cta-cv:hover {
+    background: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(41, 151, 255, 0.4);
+}
+
+/* Menu Burger Mobile (caché sur ordi) */
+.menu-toggle { display: none; cursor: pointer; }
+.bar { display: block; width: 25px; height: 2px; background: #fff; margin: 5px auto; transition: 0.3s; }
+
 /* --- HERO SECTION (Entête de page) --- */
 .hero {
-    height: 90vh; /* Prend 90% de la hauteur de l'écran */
-    display: flex; align-items: center; justify-content: center;
+    height: 90vh; display: flex; align-items: center; justify-content: center;
     text-align: center; padding: 0 20px;
     background: radial-gradient(circle at 50% 50%, #1a1a1a 0%, #000000 100%);
 }
@@ -142,16 +157,16 @@ h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; 
 /* Configuration de la grille */
 .bento-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 colonnes de même taille */
-    grid-auto-rows: minmax(260px, auto);   /* Hauteur min de 260px par case */
-    gap: 20px; /* Espace entre les cases */
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(260px, auto);
+    gap: 20px;
 }
 
 /* Tailles spécifiques des cartes */
-.large { grid-column: span 2; grid-row: span 2; }  /* Carré 2x2 */
-.wide { grid-column: span 2; grid-row: span 1; }   /* Rectangle Horizontal */
-.medium { grid-column: span 1; grid-row: span 1; } /* Petit Carré (Standard) */
-.tall { grid-column: span 1; grid-row: span 2; }   /* Rectangle Vertical */
+.large { grid-column: span 2; grid-row: span 2; }
+.wide { grid-column: span 2; grid-row: span 1; }
+.medium { grid-column: span 1; grid-row: span 1; }
+.tall { grid-column: span 1; grid-row: span 2; }
 
 /* Style générique d'une carte bento */
 .bento-item {
@@ -162,19 +177,11 @@ h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; 
 .bento-item:hover { transform: translateY(-5px); border-color: rgba(255,255,255,0.2); }
 
 /* --- STYLE SPÉCIFIQUE DES CARTES --- */
-
 /* 1. Carte Profil */
 .profile-header { display: flex; align-items: center; gap: 20px; margin-bottom: 20px; }
 .memoji {
-    width: 80px; 
-    height: 80px; 
-    border-radius: 50%; 
-    background: #333; 
-    padding: 3px; /* J'ai réduit un peu le padding pour que la photo soit plus grande */
-    
-    /* AJOUTE CETTE LIGNE : */
-    object-fit: cover; /* Ça permet de couper l'image proprement en cercle sans l'écraser */
-    
+    width: 80px; height: 80px; border-radius: 50%; background: #333; padding: 3px;
+    object-fit: cover;
     box-shadow: 0 0 0 2px var(--accent), 0 0 20px rgba(41, 151, 255, 0.3);
     animation: glow 3s infinite alternate;
 }
@@ -183,8 +190,6 @@ h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; 
     100% { box-shadow: 0 0 0 4px var(--accent), 0 0 25px rgba(41, 151, 255, 0.6); }
 }
 .role { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 5px; }
-
-/* Badge "Disponible" avec point vert qui clignote */
 .status-badge {
     background: rgba(40, 167, 69, 0.15); color: #4cd964;
     padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; font-weight: bold;
@@ -193,38 +198,25 @@ h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; 
 .dot { width: 6px; height: 6px; background: #4cd964; border-radius: 50%; animation: pulse 2s infinite; }
 @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.4; } 100% { opacity: 1; } }
 
-/* 2. Carte Soft Skills & Stats (Verticales) */
-.tall { justify-content: space-around; } 
+/* Design du texte Bio */
+.bio-text {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    margin-top: 10px;
+}
+.bio-text strong { color: var(--text-main); font-weight: 600; }
+.bio-text .highlight-blue { color: var(--accent); font-weight: 600; }
 
+/* 2. Carte Soft Skills & Stats (Verticales) */
+.tall { justify-content: space-around; }
 .skill-list { display: flex; flex-direction: column; gap: 20px; }
 .skill-header { display: flex; justify-content: space-between; margin-bottom: 5px; font-size: 0.9rem; font-weight: 600; }
 .percent { color: var(--accent); }
 .bar { width: 100%; height: 6px; background: rgba(255,255,255,0.1); border-radius: 4px; overflow: hidden; }
-.fill { height: 100%; background: var(--accent); border-radius: 4px; } /* Barre de progression */
-
-/* --- DESIGN DU TEXTE BIO --- */
-.bio-text {
-    font-size: 0.95rem;       /* Taille légèrement réduite pour l'élégance */
-    line-height: 1.8;         /* Plus d'espace entre les lignes (aération) */
-    color: var(--text-muted); /* Gris clair pour ne pas fatiguer les yeux */
-    
-    /* Petit trait de séparation au-dessus du texte */
-    border-top: 1px solid rgba(255, 255, 255, 0.1); 
-    padding-top: 20px;
-    margin-top: 10px;
-}
-
-/* Style pour les mots importants qu'on va mettre en gras */
-.bio-text strong {
-    color: var(--text-main);  /* Ils ressortent en blanc brillant */
-    font-weight: 600;
-}
-
-/* Style pour le lien ou l'objectif (l'alternance) */
-.bio-text .highlight-blue {
-    color: var(--accent);     /* Le bleu Apple */
-    font-weight: 600;
-}
+.fill { height: 100%; background: var(--accent); border-radius: 4px; }
 
 /* Stats (Centrées) */
 .center-content { align-items: center; text-align: center; }
@@ -239,7 +231,7 @@ h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; 
 .muted { color: var(--text-muted); font-size: 0.85rem; }
 .separator { width: 100%; height: 1px; background: rgba(255,255,255,0.1); }
 
-/* 3. Cartes Compétences Tech (Carrées) */
+/* 3. Cartes Compétences Tech (Nouvelle section) */
 .skill-card h3 { margin-top: 15px; font-size: 1.2rem; color: var(--text-main); margin-bottom: 5px; }
 .skill-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
 .icon-box {
@@ -259,11 +251,8 @@ h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; 
 }
 
 /* 4. Cartes Projets */
-.project-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-.status { font-size: 0.7rem; padding: 3px 8px; border-radius: 10px; font-weight: bold; }
-.status.active { background: #1c4e27; color: #4cd964; }
-.status.school { background: #333; color: #aaa; }
-
+.project-card h3 { font-size: 1.2rem; margin-bottom: 10px; }
+.project-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 20px; }
 .tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 15px; }
 .tags span {
     background: rgba(255,255,255,0.08); font-size: 0.75rem; padding: 4px 10px;
@@ -272,12 +261,7 @@ h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; 
 .project-link { font-size: 0.9rem; font-weight: 600; color: var(--accent); margin-top: auto; display: inline-flex; align-items: center; gap: 5px;}
 .project-link:hover { text-decoration: underline; }
 
-/* Pour les cartes larges : aligne le contenu */
-.flex-row { display: flex; justify-content: space-between; width: 100%; height: 100%; }
-.flex-row > div { display: flex; flex-direction: column; justify-content: space-between; }
-
-
-/* --- SECTION CONTACT --- */
+/* --- CONTACT --- */
 .contact-section { padding: 50px 10%; margin-bottom: 50px; }
 .contact-box { text-align: center; padding: 60px; }
 .big-button {
@@ -308,14 +292,13 @@ h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -2px; 
     h1 { font-size: 2.8rem; }
     .hero { padding: 100px 20px; height: auto; }
     
-    /* On affiche le burger et on cache le menu classique */
     .menu-toggle { display: block; }
     .nav-links {
         position: fixed; left: -100%; top: 70px; flex-direction: column;
         background: #000; width: 100%; height: calc(100vh - 70px);
         align-items: center; justify-content: center; transition: 0.3s;
     }
-    .nav-links.active { left: 0; } /* Affiche le menu quand actif */
+    .nav-links.active { left: 0; }
     .nav-link { font-size: 1.2rem; }
     
     .tech-tags { justify-content: flex-start; }
