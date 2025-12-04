@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio de Kevin Six - Développeur en Alternance</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Kevin Six.</a>
+            <ul class="nav-links">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="#projects">Projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </div>
+    </nav>
+
+    <header id="hero" class="hero-section">
+        <div class="container hero-content">
+            <h1>Salut, je suis <span class="highlight">Kevin Six</span></h1>
+            <h2>Apprenti Développeur <span id="typing-text" class="typing"></span><span class="cursor">|</span></h2>
+            <p>Étudiant en BUT Informatique à Calais. Passionné par le code et l'infrastructure système. Je cherche une équipe pour m'accueillir en alternance et construire des projets solides.</p>
+            <a href="#contact" class="btn btn-primary">Me contacter</a>
+        </div>
+    </header>
+    
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="section-title">Mon Profil Technique</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>Je ne me contente pas de la théorie. J'aime comprendre comment les choses fonctionnent sous le capot, que ce soit en créant une interface web responsive ou en écrivant des scripts d'automatisation sous Linux.</p>
+                    <p>Mon expérience d'animateur (BAFA) m'a aussi appris la rigueur et le travail d'équipe, des qualités que j'applique aujourd'hui dans mes projets de développement.</p>
+                </div>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>🌐 Web Dev</h3>
+                        <p>HTML5, CSS3, Flexbox/Grid, Responsive Design, JS Vanilla.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>🐧 Système</h3>
+                        <p>Environnement Linux, Bash, Ligne de commande, Git.</p>
+                    </div>
+                    <div class="skill-card">
+                        <h3>💻 Backend & Data</h3>
+                        <p>Python, Langage C, SQL (MySQL), Modélisation de données.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Mes Projets Récents</h2>
+            <div class="projects-grid">
+                
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>Site Web Portfolio</h3>
+                        <p class="tech-stack">HTML5 • CSS3 • JS</p>
+                        <p>Le site sur lequel vous naviguez. Conception moderne, Responsive Design et animations interactives sans framework.</p>
+                        <a href="#" class="btn-text">Voir le code source &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>Scripts d'Automatisation</h3>
+                        <p class="tech-stack">Python • Linux • OS Library</p>
+                        <p>Collection de scripts utilitaires pour automatiser des tâches courantes (ex: tri automatique de fichiers système).</p>
+                        <a href="https://github.com/SixKevin" class="btn-text">Voir sur GitHub &rarr;</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-content">
+                        <h3>Gestion de Stock SQL</h3>
+                        <p class="tech-stack">MySQL • Modélisation (MCD)</p>
+                        <p>Conception d'une base de données relationnelle pour un système de stock. Scripts de création et requêtes complexes.</p>
+                        <a href="https://github.com/SixKevin" class="btn-text">Voir sur GitHub &rarr;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="footer-section">
+        <div class="container footer-content">
+            <h2>Travaillons ensemble</h2>
+            <p>Je suis actuellement disponible pour des entretiens concernant une alternance.</p>
+            <div class="contact-links">
+                <a href="sixkevin2@gmail.com" class="contact-btn">📧 M'envoyer un mail</a>
+                <a href="https://www.linkedin.com/in/sixkevin62/" class="contact-btn">💼 LinkedIn</a>
+                <a href="https://github.com/SixKevin" class="contact-btn">🐙 GitHub</a>
+            </div>
+            <p class="copyright">&copy; 2025 Kevin Six. Codé avec passion.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
