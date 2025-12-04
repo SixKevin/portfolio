@@ -3,92 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Kevin Six - Développeur en Alternance</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <title>Kevin Six | Portfolio BUT Informatique</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="container nav-container">
-            <a href="#" class="logo">Kevin Six.</a>
-            <ul class="nav-links">
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
+        <div class="container">
+            <a href="#" class="logo">K.Six<span class="dot">.</span></a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
             </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="mailto:ton.email@gmail.com" class="btn-nav">Me contacter</a></li>
+            </ul>
         </div>
     </nav>
 
-    <header id="hero" class="hero-section">
+    <section id="home" class="hero">
         <div class="container hero-content">
-            <h1>Salut, je suis <span class="highlight">Kevin Six</span></h1>
-            <h2>Apprenti Développeur <span id="typing-text" class="typing"></span><span class="cursor">|</span></h2>
-            <p>Étudiant en BUT Informatique à Calais. Passionné par le code et l'infrastructure système. Je cherche une équipe pour m'accueillir en alternance et construire des projets solides.</p>
-            <a href="#contact" class="btn btn-primary">Me contacter</a>
+            <p class="subtitle">👋 Salut, je m'appelle Kevin</p>
+            <h1>Je suis étudiant en <span class="highlight">BUT Informatique</span>.</h1>
+            <h2 class="typing-text">J'apprends le <span id="typewriter"></span><span class="cursor">|</span></h2>
+            <p class="description">
+                Passionné par le développement Web et l'administration Système (Linux).
+                Je cherche une alternance pour transformer ma curiosité en expertise professionnelle.
+            </p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
+                <a href="#about" class="btn btn-secondary">En savoir plus</a>
+            </div>
         </div>
-    </header>
-    
-    <section id="about" class="section-padding bg-light">
+    </section>
+
+    <section id="skills" class="section">
         <div class="container">
-            <h2 class="section-title">Mon Profil Technique</h2>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>Je ne me contente pas de la théorie. J'aime comprendre comment les choses fonctionnent sous le capot, que ce soit en créant une interface web responsive ou en écrivant des scripts d'automatisation sous Linux.</p>
-                    <p>Mon expérience d'animateur (BAFA) m'a aussi appris la rigueur et le travail d'équipe, des qualités que j'applique aujourd'hui dans mes projets de développement.</p>
+            <h2 class="section-title">Mes Outils</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="icon">🌐</div>
+                    <h3>Web Dev</h3>
+                    <p>Création d'interfaces responsive.</p>
+                    <div class="tags">
+                        <span>HTML5</span><span>CSS3</span><span>JS</span>
+                    </div>
                 </div>
-                <div class="skills-grid">
-                    <div class="skill-card">
-                        <h3>🌐 Web Dev</h3>
-                        <p>HTML5, CSS3, Flexbox/Grid, Responsive Design, JS Vanilla.</p>
+                <div class="skill-card">
+                    <div class="icon">🐧</div>
+                    <h3>Système & Linux</h3>
+                    <p>Gestion de fichiers et scripting.</p>
+                    <div class="tags">
+                        <span>Bash</span><span>Shell</span><span>Git</span>
                     </div>
-                    <div class="skill-card">
-                        <h3>🐧 Système</h3>
-                        <p>Environnement Linux, Bash, Ligne de commande, Git.</p>
-                    </div>
-                    <div class="skill-card">
-                        <h3>💻 Backend & Data</h3>
-                        <p>Python, Langage C, SQL (MySQL), Modélisation de données.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="icon">💾</div>
+                    <h3>Data & Logiciel</h3>
+                    <p>Logique algorithmique et bases de données.</p>
+                    <div class="tags">
+                        <span>Python</span><span>C</span><span>MySQL</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section-padding">
+    <section id="projects" class="section bg-dark">
         <div class="container">
-            <h2 class="section-title">Mes Projets Récents</h2>
+            <h2 class="section-title text-light">Projets Récents</h2>
             <div class="projects-grid">
                 
                 <div class="project-card">
-                    <div class="card-content">
-                        <h3>Site Web Portfolio</h3>
-                        <p class="tech-stack">HTML5 • CSS3 • JS</p>
-                        <p>Le site sur lequel vous naviguez. Conception moderne, Responsive Design et animations interactives sans framework.</p>
-                        <a href="#" class="btn-text">Voir le code source &rarr;</a>
+                    <div class="card-header code-bg">
+                        <span class="badge">Web</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Portfolio Personnel</h3>
+                        <p>Le site sur lequel vous êtes. Développé "from scratch" pour maîtriser le Responsive Design et le JavaScript sans framework.</p>
+                        <a href="https://github.com/SixKevin/portfolio" target="_blank" class="link-arrow">Voir le dépôt GitHub &rarr;</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="card-content">
-                        <h3>Scripts d'Automatisation</h3>
-                        <p class="tech-stack">Python • Linux • OS Library</p>
-                        <p>Collection de scripts utilitaires pour automatiser des tâches courantes (ex: tri automatique de fichiers système).</p>
-                        <a href="https://github.com/SixKevin" class="btn-text">Voir sur GitHub &rarr;</a>
+                    <div class="card-header python-bg">
+                        <span class="badge">Python</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Script d'Automatisation</h3>
+                        <p>Script utilitaire permettant de trier automatiquement des fichiers dans des dossiers selon leur extension.</p>
+                        <a href="script_tri.py" target="_blank" class="link-arrow">Lire le code source &rarr;</a>
                     </div>
                 </div>
 
                 <div class="project-card">
-                    <div class="card-content">
-                        <h3>Gestion de Stock SQL</h3>
-                        <p class="tech-stack">MySQL • Modélisation (MCD)</p>
-                        <p>Conception d'une base de données relationnelle pour un système de stock. Scripts de création et requêtes complexes.</p>
-                        <a href="https://github.com/SixKevin" class="btn-text">Voir sur GitHub &rarr;</a>
+                    <div class="card-header sql-bg">
+                        <span class="badge">SQL</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Gestion de Stock</h3>
+                        <p>Conception d'une base de données relationnelle (MCD) et requêtes d'analyse de stock.</p>
+                        <a href="base_de_donnees.sql" target="_blank" class="link-arrow">Lire le code source &rarr;</a>
                     </div>
                 </div>
 
@@ -96,16 +117,25 @@
         </div>
     </section>
 
-    <footer id="contact" class="footer-section">
-        <div class="container footer-content">
-            <h2>Travaillons ensemble</h2>
-            <p>Je suis actuellement disponible pour des entretiens concernant une alternance.</p>
-            <div class="contact-links">
-                <a href="sixkevin2@gmail.com" class="contact-btn">📧 M'envoyer un mail</a>
-                <a href="https://www.linkedin.com/in/sixkevin62/" class="contact-btn">💼 LinkedIn</a>
-                <a href="https://github.com/SixKevin" class="contact-btn">🐙 GitHub</a>
+    <section id="about" class="section">
+        <div class="container about-container">
+            <div class="about-text">
+                <h2 class="section-title align-left">Pourquoi moi ?</h2>
+                <p>Au-delà du code, je suis quelqu'un de <strong>fiable</strong>.</p>
+                <p>Mon expérience d'animateur (BAFA) m'a appris la gestion de groupe, la responsabilité et le travail d'équipe. Je ne suis pas juste un étudiant qui code dans son coin, je sais communiquer et m'adapter.</p>
+                <p>Actuellement en BUT Informatique à Calais, je suis prêt à m'investir à 100% dans vos projets.</p>
+                <a href="sixkevin2@gmail.com" class="btn btn-primary">Me contacter</a>
             </div>
-            <p class="copyright">&copy; 2025 Kevin Six. Codé avec passion.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Kevin Six.</p>
+            <div class="socials">
+                <a href="https://github.com/SixKevin">GitHub</a>
+                <a href="https://www.linkedin.com/in/sixkevin62/">LinkedIn</a>
+            </div>
         </div>
     </footer>
 
