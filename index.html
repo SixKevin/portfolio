@@ -4,141 +4,364 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Six | Portfolio BUT Informatique</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Kevin.Six<span class="dot">.</span></a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Accueil</a></li>
-                <li><a href="#skills" class="nav-link">Compétences</a></li>
-                <li><a href="#projects" class="nav-link">Projets</a></li>
-                <li><a href="#about" class="nav-link">À propos</a></li>
-                <li><a href="mailto:sixkevin2@gmail.com@gmail.com" class="btn-nav">Me contacter</a></li>
-            </ul>
+    <div class="background-animation"></div>
+
+    <nav class="glass-nav">
+
+        <div class="logo"><i class="fa-solid fa-terminal"></i> Kevin<span class="highlight">.Six</span></div>
+        
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
         </div>
+
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link">Profil</a></li>
+            <li><a href="#skills" class="nav-link">Compétences</a></li>
+            <li><a href="#projets" class="nav-link">Projets</a></li>
+            <li><a href="mailto:kevin.six@etu.univ-littoral.fr" class="cta-btn">Contact</a></li>
+        </ul>
+
     </nav>
 
-    <section id="home" class="hero">
-        <div class="container hero-content">
-            <p class="subtitle">👋 Salut, je m'appelle Kevin</p>
-            <h1>Je suis étudiant en <span class="highlight">BUT Informatique</span>.</h1>
-            <h2 class="typing-text">J'apprends le <span id="typewriter"></span><span class="cursor">|</span></h2>
-            <p class="description">
-                Passionné par le développement Web et l'administration Système (Linux).
-                Je cherche une alternance pour transformer ma curiosité en expertise professionnelle.
-            </p>
-            <div class="hero-btns">
-                <a href="#projects" class="btn btn-primary">Voir mes projets</a>
-                <a href="#about" class="btn btn-secondary">En savoir plus</a>
-            </div>
-        </div>
-    </section>
+    <main>
+        
+        <section class="hero">
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">Mes Outils</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="icon">🌐</div>
-                    <h3>Web Dev</h3>
-                    <p>Création d'interfaces responsive.</p>
-                    <div class="tags">
-                        <span>HTML5</span><span>CSS3</span><span>JS</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="icon">🐧</div>
-                    <h3>Système & Linux</h3>
-                    <p>Gestion de fichiers et scripting.</p>
-                    <div class="tags">
-                        <span>Bash</span><span>Shell</span><span>Git</span>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="icon">💾</div>
-                    <h3>Data & Logiciel</h3>
-                    <p>Logique algorithmique et bases de données.</p>
-                    <div class="tags">
-                        <span>Python</span><span>C</span><span>MySQL</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="hero-content">
 
-    <section id="projects" class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title text-light">Projets Récents</h2>
-            <div class="projects-grid">
+                <span class="badge">🚀 Étudiant BUT Informatique</span>
+
+                <h1>Développeur <br> <span class="gradient-text">Web & Système</span></h1>
                 
-                <div class="project-card">
-                    <div class="card-header code-bg">
-                        <span class="badge">Web</span>
+                <h2 class="typing-container">> Je conçois des expériences <span id="typewriter"></span><span class="cursor">_</span></h2>
+                
+                <p class="description">
+                    Passionné par l'architecture logicielle, l'administration Linux et le développement Web. 
+                    Actuellement à la recherche d'une <strong>alternance</strong>.
+                </p>
+                
+                <div class="hero-btns">
+                    <a href="#projets" class="btn btn-primary">Voir mes travaux</a>
+                    <a href="https://github.com/SixKevin" target="_blank" class="btn btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="about" class="bento-section">
+            <h2 class="section-title">À Propos</h2>
+            
+            <div class="bento-grid">
+                
+                <div class="bento-item large profile-card glass">
+
+                    <div class="profile-header">
+
+                        <div class="memoji-container">
+                            <img src="https://cdn-icons-png.flaticon.com/512/4333/4333609.png" alt="Kevin Six" class="memoji">
+                        </div>
+
+                        <div class="profile-info">
+                            <h3>Kevin Six</h3>
+                            <p class="role">Étudiant @ IUT Calais</p>
+                            <span class="status-badge"><span class="dot"></span> En recherche d'alternance</span>
+                        </div>
+
                     </div>
-                    <div class="card-body">
+
+                    <p class="bio-text">
+                        Actuellement étudiant en <strong>BUT Informatique</strong> à l'IUT de Calais, je combine curiosité technique et esprit d'équipe.
+                        <br><br> Mon parcours est un équilibre entre la rigueur du code (<strong>Linux, C, Python</strong>) et le relationnel acquis via l'animation (<strong>BAFA</strong>). Je ne cherche pas seulement à écrire des lignes de code, mais à construire des solutions utiles et robustes.
+                        <br><br>
+                        Je suis à la recherche d'une <span class="highlight-blue">alternance</span> pour mettre mon énergie au service de vos projets.
+                    </p>
+
+                </div>
+
+                <div class="bento-item tall glass">
+
+                    <h3>Soft Skills</h3>
+
+                    <div class="skill-list">
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span><i class="fa-solid fa-circle-check"></i> Fiabilité</span>
+                                <span class="percent">100%</span>
+                            </div>
+                            <div class="bar"><div class="fill" style="width: 100%"></div></div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span><i class="fa-solid fa-lightbulb"></i> Curiosité</span>
+                                <span class="percent">100%</span>
+                            </div>
+                            <div class="bar"><div class="fill" style="width: 100%"></div></div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span><i class="fa-solid fa-users"></i> Équipe</span>
+                                <span class="percent">90%</span>
+                            </div>
+                            <div class="bar"><div class="fill" style="width: 90%"></div></div>
+                        </div>
+
+                        <div class="skill">
+                            <div class="skill-header">
+                                <span><i class="fa-solid fa-rocket"></i> Autonomie</span>
+                                <span class="percent">85%</span>
+                            </div>
+                            <div class="bar"><div class="fill" style="width: 85%"></div></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="bento-item tall glass center-content">
+
+                    <div class="stats-group">
+
+                        <div class="stats-box">
+                            <i class="fa-solid fa-earth-europe icon-gradient"></i>
+                            <h4>Anglais B2</h4>
+                            <p class="muted">Technique & Lu</p>
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div class="stats-box">
+                            <i class="fa-solid fa-car icon-gradient"></i>
+                            <h4>Permis B (En cours..) </h4>
+                            <p class="muted">Mobile</p>
+                        </div>
+
+                        <div class="separator"></div>
+
+                        <div class="stats-box">
+                            <i class="fa-solid fa-location-dot icon-gradient"></i>
+                            <h4>Calais</h4>
+                            <p class="muted">Hauts-de-France</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section id="skills" class="bento-section">
+
+            <h2 class="section-title">Mes Compétences</h2>
+            
+            <div class="bento-grid">
+
+                <div class="bento-item medium glass skill-card">
+
+                    <div class="icon-box blue"><i class="fa-solid fa-globe"></i></div>
+
+                    <h3>Développement Web</h3>
+
+                    <p>Création d'interfaces responsive et modernes.</p>
+
+                    <div class="tech-tags">
+                        <span><i class="fa-brands fa-html5"></i> HTML5</span>
+                        <span><i class="fa-brands fa-css3-alt"></i> CSS3</span>
+                        <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    </div>
+
+                </div>
+
+                <div class="bento-item medium glass skill-card">
+
+                    <div class="icon-box purple"><i class="fa-brands fa-linux"></i></div>
+
+                    <h3>Système & Linux</h3>
+
+                    <p>Administration, Scripting et Automatisation.</p>
+
+                    <div class="tech-tags">
+                        <span><i class="fa-solid fa-terminal"></i> Bash</span>
+                        <span><i class="fa-brands fa-ubuntu"></i> Linux</span>
+                        <span><i class="fa-solid fa-server"></i> Shell</span>
+                    </div>
+
+                </div>
+
+                <div class="bento-item medium glass skill-card">
+
+                    <div class="icon-box yellow"><i class="fa-solid fa-code"></i></div>
+
+                    <h3>Backend & Data</h3>
+
+                    <p>Logique logicielle et bases de données.</p>
+
+                    <div class="tech-tags">
+                        <span><i class="fa-brands fa-python"></i> Python</span>
+                        <span><i class="fa-solid fa-c"></i> C</span>
+                        <span><i class="fa-solid fa-database"></i> MySQL</span>
+                    </div>
+
+                </div>
+
+                <div class="bento-item medium glass skill-card">
+
+                    <div class="icon-box green"><i class="fa-solid fa-toolbox"></i></div>
+
+                    <h3>Outils & DevOps</h3>
+
+                    <p>Workflow professionnel et versioning.</p>
+
+                    <div class="tech-tags">
+                        <span><i class="fa-brands fa-git-alt"></i> Git</span>
+                        <span><i class="fa-brands fa-github"></i> GitHub</span>
+                        <span><i class="fa-solid fa-code-branch"></i> VS Code</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projets" class="bento-section">
+
+            <h2 class="section-title">Mes Réalisations</h2>
+            
+            <div class="bento-grid">
+
+                <div class="bento-item wide glass project-card">
+
+                    <div>
+
+                        <div class="project-header">
+                            <div class="icon-box blue"><i class="fa-solid fa-globe"></i></div>
+                            <span class="status active">En ligne</span>
+                        </div>
+
                         <h3>Portfolio Personnel</h3>
-                        <p>Le site sur lequel vous êtes. Développé "from scratch" pour maîtriser le Responsive Design et le JavaScript sans framework.</p>
-                        <a href="https://github.com/SixKevin/portfolio" target="_blank" class="link-arrow">Voir le dépôt GitHub &rarr;</a>
+
+                        <p>Le site sur lequel vous êtes. Conçu from-scratch pour maîtriser le Responsive Design, le Glassmorphism et les animations CSS modernes.</p>
+
+                        <div class="tags">
+                            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+                        </div>
+
                     </div>
+
+                    <a href="https://github.com/SixKevin/portfolio" target="_blank" class="project-link">
+                        Voir le code <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
                 </div>
 
-                <div class="project-card">
-                    <div class="card-header python-bg">
-                        <span class="badge">Python</span>
+                <div class="bento-item medium glass project-card">
+
+                    <div>
+
+                        <div class="project-header">
+
+                            <div class="icon-box yellow"><i class="fa-brands fa-python"></i></div>
+                            
+                            <span class="status school">Projet École</span>
+
+                        </div>
+
+                        <h3>Calculatrice Python</h3>
+
+                        <p>App console avec gestion d'erreurs et menus.</p>
+
+                        <div class="tags">
+                            <span>Python</span><span>Algo</span>
+                        </div>
+
                     </div>
-                    <div class="card-body">
-                        <h3>Calculatrice Interactive</h3>
-                        <p>Application console robuste avec menu interactif, gestion des erreurs (division par zéro) et boucle d'exécution.</p>
-                        <a href="script_calculatrice.py" target="_blank" class="link-arrow">Voir le code source &rarr;</a>
-                    </div>
+
+                    <a href="calculatrice.py" target="_blank" class="project-link">
+                        Voir le code <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
                 </div>
 
-                <div class="project-card">
-                    <div class="card-header sql-bg">
-                        <span class="badge">SQL</span>
+                <div class="bento-item medium glass project-card">
+
+                    <div>
+
+                        <div class="project-header">
+
+                            <div class="icon-box purple"><i class="fa-solid fa-database"></i></div>
+
+                            <span class="status school">Projet École</span>
+
+                        </div>
+
+                        <h3>Gestion Stock</h3>
+
+                        <p>Modélisation MCD et requêtes SQL complexes.</p>
+
+                        <div class="tags"><span>MySQL</span><span>SQL</span></div>
+
                     </div>
-                    <div class="card-body">
-                        <h3>Gestion de Stock</h3>
-                        <p>Conception d'une base de données relationnelle (MCD) et requêtes d'analyse de stock.</p>
-                        <a href="base_de_donnees.sql" target="_blank" class="link-arrow">Lire le code source &rarr;</a>
-                    </div>
+
+                    <a href="base_de_donnees.sql" target="_blank" class="project-link">
+                        Voir le code <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
                 </div>
 
             </div>
-        </div>
-    </section>
 
-    <section id="about" class="section">
-        <div class="container about-container">
-            <div class="about-text">
-                <h2 class="section-title align-left">Pourquoi moi ?</h2>
-                <p>Au-delà du code, je suis quelqu'un de <strong>fiable</strong>.</p>
-                <p>Mon expérience d'animateur (BAFA) m'a appris la gestion de groupe, la responsabilité et le travail d'équipe. Je ne suis pas juste un étudiant qui code dans son coin, je sais communiquer et m'adapter.</p>
-                <p>Actuellement en BUT Informatique à Calais, je suis prêt à m'investir à 100% dans vos projets.</p>
-                <a href="mailto:sixkevin2@gmail.com" class="btn btn-primary">Me contacter</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Kevin Six.</p>
-            <div class="socials">
-                <a href="https://github.com/SixKevin">GitHub</a>
-                <a href="https://www.linkedin.com/in/sixkevin62/">LinkedIn</a>
+        <section id="contact" class="contact-section">
+
+            <div class="contact-box glass">
+
+                <h2>Prêt à collaborer ?</h2>
+
+                <p>Je suis disponible pour une alternance ou un stage.</p>
+
+                <a href="mailto:kevin.six@etu.univ-littoral.fr" class="big-button">Me contacter <i class="fa-solid fa-envelope"></i></a>
+
             </div>
+
+        </section>
+
+    </main>
+
+    <footer class="terminal-footer">
+
+        <div class="status-item">
+            <i class="fa-solid fa-code-branch"></i> <span>main</span>
         </div>
+
+        <div class="status-item">
+            <i class="fa-solid fa-circle-check" style="color: #4cd964;"></i> <span>No Errors</span>
+        </div>
+
+        <div class="status-item right">
+            <i class="fa-brands fa-linux"></i> <span>KevinOS v1.0</span>
+        </div>
+
     </footer>
 
     <script src="script.js"></script>
+
 </body>
+
 </html>
