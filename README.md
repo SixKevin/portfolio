@@ -1,5 +1,10 @@
 # Portfolio Personnel - Kevin Six 🚀
 
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![Responsive](https://img.shields.io/badge/design-Responsive-blue?style=for-the-badge)
+
 > **Vitrine interactive de mon profil de développeur en recherche d'alternance.**
 
 ---
@@ -35,3 +40,23 @@ portfolio/
 ├── style.css    # Design & Responsive
 ├── script.js    # Logique & Animations
 └── README.md    # Documentation
+
+🚀 Installation locale
+Si vous souhaitez tester ce code sur votre machine :
+
+1.Clonez le dépôt : git clone [https://github.com/SixKevin/portfolio.git](https://github.com/SixKevin/portfolio.git)
+
+2.Ouvrez le dossier : cd portfolio
+
+3.Lancez le fichier index.html dans votre navigateur.
+
+📫 Contact
+Je suis actuellement à la recherche d'une alternance (Rythme adaptable).
+
+Profil GitHub : SixKevin
+
+LinkedIn : https://www.linkedin.com/in/sixkevin62/
+
+Localisation : Calais / Guînes
+
+© 2025 Kevin Six
