@@ -20,7 +20,7 @@ def calculer():
         effacer_ecran()
         afficher_menu()
         
-        choix = input("\n👉 Ton choix : ").upper()
+        choix = input("\n Ton choix : ").upper()
         
         if choix == 'Q':
             print("\nMerci d'avoir utilisé la calculatrice. À bientôt !")
@@ -47,16 +47,16 @@ def calculer():
                 operation = "*"
             elif choix == '4':
                 if nombre2 == 0:
-                    print("\n❌ Erreur : Impossible de diviser par zéro !")
+                    print("\n Erreur : Impossible de diviser par zéro !")
                     input("\nAppuie sur Entrée pour recommencer...")
                     continue
                 resultat = nombre1 / nombre2
                 operation = "/"
 
-            print(f"\n✅ RÉSULTAT : {nombre1} {operation} {nombre2} = {resultat}")
+            print(f"\n RÉSULTAT : {nombre1} {operation} {nombre2} = {resultat}")
             
         except ValueError:
-            print("\n❌ Erreur : Veuillez entrer des chiffres valides.")
+            print("\n Erreur : Veuillez entrer des chiffres valides.")
         
         input("\nAppuie sur Entrée pour faire un autre calcul...")
 
